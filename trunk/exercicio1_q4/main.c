@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <stdbool.h> //biblioteca que simula tipos booleanos (true e false)
 
 int main(void) {
 	unsigned int i, j, x, y, soma = 0;
@@ -14,11 +14,11 @@ int main(void) {
 		if (i == 1) //por definição, 1 não é primo
 			continue;
 
-		primo = true;
+		primo = true; //na verdade, true é uma constante com valor 1
 
 		for (j = 2; j <= i / 2; j++) {
 			if (i % j == 0) {
-				primo = false;
+				primo = false; //false é uma constante com valor 0
 				break;
 			}
 		}
