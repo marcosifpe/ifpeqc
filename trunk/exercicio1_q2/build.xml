@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="q2">
+	<property file="../Teste/source.properties" />
+	<property name="question.number" value="2"/>
+
+	<target name="clean">
+		<echo message="clean..." />
+		<delete>
+		    <fileset dir="." includes="*.c,s*.txt"/>
+		</delete>
+		<echo message="done" />
+	</target>
+	<target name="copy">
+		<echo message="copy..." />
+		<copy file="${source.driver}${source.dir}\q${question.number}\q${question.number}.c" tofile="q${question.number}.c" overwrite="true" />
+		<echo message="done" />
+	</target>
+	<target name="all" depends="clean, copy" />
+</project>
