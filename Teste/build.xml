@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="all_files">	
+	<target name="clean">
+		<ant dir="../exercicio1_q1/" target="clean" />
+		<ant dir="../exercicio1_q2/" target="clean" />
+		<ant dir="../exercicio1_q3/" target="clean" />
+		<ant dir="../exercicio1_q4/" target="clean" />
+		<ant dir="../exercicio1_q5/" target="clean" />
+	</target>
+	<target name="copy">
+		<ant dir="../exercicio1_q1/" target="copy" />
+		<ant dir="../exercicio1_q2/" target="copy" />
+		<ant dir="../exercicio1_q3/" target="copy" />
+		<ant dir="../exercicio1_q4/" target="copy" />
+		<ant dir="../exercicio1_q5/" target="copy" />		
+	</target>
+	<target name="all">
+		<ant dir="../exercicio1_q1/" target="all" />
+		<ant dir="../exercicio1_q2/" target="all" />
+		<ant dir="../exercicio1_q3/" target="all" />
+		<ant dir="../exercicio1_q4/" target="all" />
+		<ant dir="../exercicio1_q5/" target="all" />				
+	</target>	
+</project>
