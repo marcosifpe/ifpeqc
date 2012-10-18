@@ -8,6 +8,7 @@
 		<delete>
 		    <fileset dir="." includes="*.c,s*.txt"/>
 		</delete>
+		<delete dir="Debug" />
 		<echo message="done" />
 	</target>
 	<target name="copy">
