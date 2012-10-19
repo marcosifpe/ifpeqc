@@ -1,7 +1,6 @@
 package teste;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.BufferedReader;
@@ -14,9 +13,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -74,25 +71,41 @@ public class Verify {
 	public static void tearDownAfterClass() throws Exception {
 	}
 
-	@Before
-	public void setUp() throws Exception {
+	@Test
+	public void testQ1() {
+		compare(1);
 	}
-
-	@After
-	public void tearDown() throws Exception {
+	
+	@Test
+	public void testQ2() {
+		compare(2);
 	}
 
 	@Test
-	public void testQ1() {
+	public void testQ3() {
+		compare(3);
+	}
+	
+	@Test
+	public void testQ4() {
+		compare(4);
+	}
+
+	@Test
+	public void testQ5() {
+		compare(5);
+	}
+
+	private void compare(int questionNumber) {
 		try {
-			List<String> lines = getLines(resultFiles.get(0));
-			List<String> expectedLines = getLines(expectedFiles.get(0)); 
+			List<String> lines = getLines(resultFiles.get(questionNumber - 1));
+			List<String> expectedLines = getLines(expectedFiles.get(questionNumber - 1)); 
 			
 			for (int i = 0; i < expectedLines.size(); i++) {
 				try {
-					assertEquals(expectedLines.get(0), lines.get(0));
+					assertEquals("Resultado não confere na linha " + (i + 1) + ". Questão " + questionNumber, expectedLines.get(0), lines.get(0));
 				} catch(IndexOutOfBoundsException ex) {
-					fail("Arquivo gerado com quantidade inferior de linhas ao esperado");
+					fail("Arquivo gerado com quantidade inferior de linhas ao esperado. Questão " + questionNumber);
 				}
 			}
 		} catch (IOException e) {
