@@ -103,7 +103,7 @@ public class Verify {
 			
 			for (int i = 0; i < expectedLines.size(); i++) {
 				try {
-					assertEquals("Resultado não confere na linha " + (i + 1) + ". Questão " + questionNumber, expectedLines.get(0), lines.get(0));
+					assertEquals("Resultado não confere (linha " + (i + 1) + ", questão " + questionNumber + ").", expectedLines.get(i), lines.get(i));
 				} catch(IndexOutOfBoundsException ex) {
 					fail("Arquivo gerado com quantidade inferior de linhas ao esperado. Questão " + questionNumber);
 				}
