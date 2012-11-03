@@ -50,8 +50,8 @@ int main(void) {
 	scanf("%u", &n);
 
 	while(n--) {
-		scanf("%s", s1);
-		scanf("%s", s2);
+		scanf("%20s", s1);
+		scanf("%20s", s2);
 
 		//if (strstr(s2, s1) != NULL) {
 		if (ehSubstring(s1, s2)) {
