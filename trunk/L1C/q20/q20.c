@@ -9,7 +9,7 @@
 #include <time.h>
 #include <stddef.h>
 
-#define T 30
+#define T 10
 
 int main(void) {
 	int i, n, v[T], soma;
