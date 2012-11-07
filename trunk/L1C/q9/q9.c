@@ -12,21 +12,18 @@ int main(void) {
 	freopen("e9.txt", "r", stdin);
 	freopen("s9.txt", "w", stdout);
 	scanf("%d %d", &x, &y);
-	x += 1;
+
 
 	while (y--) {
 		while (1) {
+			x += 1;
 			if (x % 400 == 0) {
 				printf("%d\n", x);
-				x += 1;
 				break;
 			} else if (x % 4 == 0 && x % 100 != 0) {
 				printf("%d\n", x);
-				x += 1;
 				break;
 			}
-
-			x += 1;
 		}
 	}
 
