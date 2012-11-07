@@ -20,8 +20,7 @@ int main(void) {
 
 		if (n == 0)
 			printf("Saque invalidado");
-
-		while (n) {
+		else
 			for (i = 0; i < 7; i++) {
 				div = n / v[i];
 				n %= v[i];
@@ -32,7 +31,7 @@ int main(void) {
 						printf("+");
 				}
 			}
-		}
+
 
 		printf("\n");
 	}
