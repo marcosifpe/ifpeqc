@@ -13,12 +13,11 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class Verify {
-	int questionNumber = 0;
+	private static int questionNumber = 0;
 	private static final String RESULT_PATTERN = "../q";
 	private static final String EXPECTED_PATTERN = "results/";
 	private static final Integer questions = 26;
@@ -66,10 +65,6 @@ public class Verify {
 		}
 		
 		return lines;		
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
 	}
 
 	@Test
