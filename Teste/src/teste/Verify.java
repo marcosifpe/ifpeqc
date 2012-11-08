@@ -21,7 +21,7 @@ public class Verify {
 	int questionNumber = 0;
 	private static final String RESULT_PATTERN = "../q";
 	private static final String EXPECTED_PATTERN = "results/";
-	private static final Integer questions = 5;
+	private static final Integer questions = 26;
 	private static List<File> resultFiles = new ArrayList<File>();
 	private static List<File> expectedFiles = new ArrayList<File>();
 
