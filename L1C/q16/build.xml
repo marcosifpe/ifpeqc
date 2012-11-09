@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="q16">
-	<property file="../Teste/source.properties" />
+	<property file="../correcaoL1C/source.properties" />
 	<property name="question.number" value="1"/>
 
 	<target name="clean">
