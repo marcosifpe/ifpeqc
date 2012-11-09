@@ -1,0 +1,12 @@
+250.11 K: -23.04 C
+H2O: solido
+Hg: liquido
+320.00 K: 46.85 C
+H2O: liquido
+Hg: liquido
+570.60 K: 297.45 C
+H2O: gasoso
+Hg: liquido
+653.90 K: 380.75 C
+H2O: gasoso
+Hg: gasoso
