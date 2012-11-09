@@ -1,0 +1,6 @@
+1x50+2x2
+1x10+1x1
+Saque invalidado
+1x100
+1x5+1x2+1x1
+1x100+1x20+1x10+1x5+1x2

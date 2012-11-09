@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="q12">
+	<property file="../correcaoL1C/source.properties" />
+	<property name="question.number" value="12"/>
+
+	<target name="clean">
+		<echo message="clean..." />
+		<delete>
+		    <fileset dir="." includes="*.c,s*.txt"/>
+		</delete>
+		<delete dir="Debug" />
+		<delete dir="Release" />
+		<echo message="done" />
+	</target>
+	<target name="copy">
+		<echo message="copy..." />
+		<copy file="${source.driver}${source.dir}\q${question.number}\q${question.number}.c" tofile="q${question.number}.c" overwrite="true" failonerror="false"/>
+		<echo message="done" />
+	</target>
+	<target name="all" depends="clean, copy" />
+</project>
