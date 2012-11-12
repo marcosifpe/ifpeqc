@@ -14,7 +14,7 @@
 int main(void) {
 	int horas;
 	char sexo, titulacao;
-	float salario, somam = 0, somaf = 0, soma = 0, t = 0, tm = 0, tf = 0;
+	double salario, somam = 0, somaf = 0, soma = 0, t = 0, tm = 0, tf = 0;
 	freopen("e6.txt", "r", stdin);
 	freopen("s6.txt", "w", stdout);
 
@@ -40,13 +40,13 @@ int main(void) {
 			tf++;
 		}
 
-		printf("%.2f\n", salario);
+		printf("%.2lf\n", salario);
 		scanf("%d %c %c", &horas, &sexo, &titulacao);
 	}
 
-	printf("Media m: %.2f\n", somam / tm);
-	printf("Media f: %.2f\n", somaf / tf);
-	printf("Media geral: %.2f\n", soma / t);
+	printf("Media m: %.2lf\n", somam / tm);
+	printf("Media f: %.2lf\n", somaf / tf);
+	printf("Media geral: %.2lf\n", soma / t);
 
 	fclose(stdin);
 	fclose(stdout);
