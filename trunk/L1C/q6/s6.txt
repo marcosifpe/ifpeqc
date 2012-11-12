@@ -4,6 +4,7 @@
 2455.00
 9984.00
 5097.84
+3744.00
 Media m: 7938.00
-Media f: 5308.05
-Media geral: 6184.70
+Media f: 4995.24
+Media geral: 5836.03
