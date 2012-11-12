@@ -1,7 +1,8 @@
 32 f M
-60 m E
+20 m E
 35 f D
 25 f E
-40 m D
+35 m D
 33 f M
+15 m D
 0 a a
