@@ -23,7 +23,7 @@ double calculaPI(int n) {
 }
 
 double calculaErro(double pi) {
-	return (M_PI - pi) / M_PI;
+	return M_PI > pi ? (M_PI - pi) / M_PI : (pi - M_PI) / M_PI;
 }
 
 int main(void) {
