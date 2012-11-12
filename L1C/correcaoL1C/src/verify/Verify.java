@@ -163,8 +163,39 @@ public class Verify {
 	}
 
 	@Test	
-	public void testQ20() {
-		compare();
+	public void testQ20() {		
+		try {
+			boolean equals = false;
+			String line;
+			Integer[] total = new Integer[20];
+			Integer k = 0;
+			List<String> lines = getLines(resultFiles.get(++questionNumber - 1));			
+			
+			for (int i = 0; i < 20; i++, k++) {
+				line = lines.get(i);
+				total[k] = new Integer(line.split("=")[0].trim());
+				Integer soma = 0;		
+				String[] splits = line.split("=")[1].split("\\+");
+				for (int j = 0; j < splits.length; j++) {
+					soma += new Integer(splits[j].trim());
+				}
+				
+				assertEquals("Os números gerados não correspondem à soma: " + total[k] + ":" + soma, total[k].intValue(), soma.intValue());			
+			}
+			
+			for (int i = 1; i < total.length; i++) {
+				equals = (total[0].intValue() == total[i].intValue());
+				if (!equals)
+					break;
+			}
+			
+			if (equals)
+				fail("todas as somas são iguais.");
+			
+			
+		} catch (IOException e) {
+			fail("erro na leitura do arquivo");
+		}
 	}
 
 	@Test	
