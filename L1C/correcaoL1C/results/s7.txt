@@ -3,3 +3,4 @@ T6=21 imperfeito
 T3=6 perfeito
 T31=496 perfeito
 T11=66 imperfeito
+T7=28 perfeito
