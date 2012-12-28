@@ -1,0 +1,13 @@
+3
+Y Z X
+200
+Z X X N X B Y X N Y B B N B Z Z X Z B Z
+Y Y Y Y N N Z B N N B Z Y Z Y Z Z N X X
+N Z B Z Y Y B B Y X X Y B N N B N N N B
+N Y B B X Y Z N N B B B B Y X X Z N N Z
+Y B Y N N Y B X X Y Z N Y B X N Z Y X Y
+Y Z B X B B N X N Y N Z B Y B B N Y Z B
+X Z X X N Z N X Z Z B X N B Z Y N N Z N
+Y Y Y B Z N X Z Z Y N N N B B N Y Z B N
+N Y Y Y B Z B X Z Y Y X X Y X Y N N X Y
+N Y X Z X Y N N Y Y B Y Z Y Z Z B Z Z N
