@@ -1,0 +1,8 @@
+Domingo: 1130.50
+Segunda: 660.00
+Terca: 650.20
+Quarta: 539.70
+Quinta: 844.50
+Sexta: 1344.40
+Sabado: 1698.90
+Total: 6868.20
