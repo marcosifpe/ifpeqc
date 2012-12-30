@@ -1,0 +1,6 @@
+A: 2
+T: 4
+a: 3
+b: 3
+m: 2
+B A b A b b T a a a E J X m m s S t T R z T w T Z 
