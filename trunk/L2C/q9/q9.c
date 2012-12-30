@@ -24,7 +24,7 @@ void soma(aritmetica * calc) {
 }
 
 void subtracao(aritmetica * calc) {
-	calc->z = calc->x + calc->y;
+	calc->z = calc->x - calc->y;
 	calc->op = '-';
 	calc->erro = false;
 }
