@@ -1,2 +1,2 @@
-exp(5.20): 179.95
-erro relativo: 0.73%
+exp(7.50): 1799.71
+erro relativo: 0.46%
