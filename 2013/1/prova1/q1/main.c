@@ -1,7 +1,7 @@
 /*
  * main.c
  *
- * Questão 1, Prova Branca
+ * Prova Branca
  *
  *  Created on: 09/05/2013
  *      Author: masc
