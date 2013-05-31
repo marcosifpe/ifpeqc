@@ -4,12 +4,6 @@
  *  Created on: 31/05/2013
  *      Author: masc
  */
-/*
- * q8.c
- *
- *  Created on: 24/04/2013
- *      Author: masc
- */
 #include <stdio.h>
 #include <math.h>
 #define T 9
