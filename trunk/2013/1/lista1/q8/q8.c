@@ -8,6 +8,14 @@
 #include <math.h>
 #define T 9
 
+unsigned int calculaDigitos(unsigned int x) {
+	unsigned int i;
+
+	for (i = 1; pow(10, i) <= x; i++);
+
+	return i;
+}
+
 void imprimirDigitos(unsigned int digitos, unsigned int numero) {
 	unsigned int divisor = 1, dig = digitos, cociente, v[T], i = 0;
 
@@ -28,8 +36,7 @@ void imprimirDigitos(unsigned int digitos, unsigned int numero) {
 }
 
 int main(void) {
-	unsigned digitos, numero, n, divisor, dig, cociente, v[T], i = 0;
-
+	unsigned int digitos, numero, n;
 	freopen("e8.txt", "r", stdin);
 	freopen("s8.txt", "w", stdout);
 
@@ -37,32 +44,8 @@ int main(void) {
 
 	while (n--) {
 		scanf("%u", &numero);
-		//realizando cálculo do dígito
-		for (i = 1; pow(10, i) <= numero; i++);
-		digitos = i;
-
-		//realizando cálculo do divisor
-		dig = digitos;
-		divisor = 1;
-
-		while (--dig) {
-			divisor *= 10;
-		}
-
-		i = 0;
-		//separando os números
-		while (divisor) {
-			cociente = numero / divisor;
-			v[i++] = cociente;
-			numero -= cociente * divisor;
-			divisor /= 10;
-		}
-
-		//iprimindo invertido
-		while(i) {
-			printf("%u", v[--i]);
-		}
-
+		digitos = calculaDigitos(numero);
+		imprimirDigitos(digitos, numero);
 		printf("\n");
 	}
 
