@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="all_files">
+	<target name="clean">
+		<ant dir="../q1/" target="clean" />
+		<ant dir="../q2/" target="clean" />
+		<ant dir="../q3/" target="clean" />
+		<ant dir="../q4/" target="clean" />
+		<ant dir="../q5/" target="clean" />
+		<ant dir="../q6/" target="clean" />
+		<ant dir="../q7/" target="clean" />
+		<ant dir="../q8/" target="clean" />
+		<ant dir="../q9/" target="clean" />
+		<ant dir="../q10/" target="clean" />
+		<ant dir="../q11/" target="clean" />
+		<ant dir="../q12/" target="clean" />
+		<ant dir="../q13/" target="clean" />
+		<ant dir="../q14/" target="clean" />
+		<ant dir="../q15/" target="clean" />
+		<ant dir="../q16/" target="clean" />
+	</target>
+	<target name="copy">
+		<ant dir="../q1/" target="copy" />
+		<ant dir="../q2/" target="copy" />
+		<ant dir="../q3/" target="copy" />
+		<ant dir="../q4/" target="copy" />
+		<ant dir="../q5/" target="copy" />
+		<ant dir="../q6/" target="copy" />
+		<ant dir="../q7/" target="copy" />
+		<ant dir="../q8/" target="copy" />
+		<ant dir="../q9/" target="copy" />
+		<ant dir="../q10/" target="copy" />
+		<ant dir="../q11/" target="copy" />
+		<ant dir="../q12/" target="copy" />
+		<ant dir="../q13/" target="copy" />
+		<ant dir="../q14/" target="copy" />
+		<ant dir="../q15/" target="copy" />
+		<ant dir="../q16/" target="copy" />
+	</target>
+	<target name="all">
+		<ant dir="../q1/" target="all" />
+		<ant dir="../q2/" target="all" />
+		<ant dir="../q3/" target="all" />
+		<ant dir="../q4/" target="all" />
+		<ant dir="../q5/" target="all" />
+		<ant dir="../q6/" target="all" />
+		<ant dir="../q7/" target="all" />
+		<ant dir="../q8/" target="all" />
+		<ant dir="../q9/" target="all" />
+		<ant dir="../q10/" target="all" />
+		<ant dir="../q11/" target="all" />
+		<ant dir="../q12/" target="all" />
+		<ant dir="../q13/" target="all" />
+		<ant dir="../q14/" target="all" />
+		<ant dir="../q15/" target="all" />
+		<ant dir="../q16/" target="all" />
+	</target>
+</project>
