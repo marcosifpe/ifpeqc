@@ -1,0 +1,4 @@
+1.00 3.00 2.00
+Nao existe solucao real para a equacao
+0.00 -2.00 -2.00
+2.00 -0.59 -3.41
