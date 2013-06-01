@@ -197,7 +197,7 @@ public class Verify {
 					assertEquals("O total não é igual à soma", total, soma);
 					
 					if (somaAnterior != 0) {
-						assertNotSame("As somas de números aleatórios estão iguais. Verificar saída", somaAnterior, soma);
+						assertNotSame("As somas de números aleatórios estão iguais.", somaAnterior, soma);
 					}
 					
 					somaAnterior = soma;
