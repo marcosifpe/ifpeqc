@@ -2,6 +2,7 @@ package verify;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
+import static org.junit.Assert.assertNotSame;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -171,7 +172,7 @@ public class Verify {
 				}
 			} else { //não utiliza uma arquivo esperado para a questão 11
 				assertEquals(1, 1);
-				
+				int somaAnterior = 0;				
 				for (Iterator<String> iterator = lines.iterator(); iterator
 						.hasNext();) {
 					int total = 0;
@@ -193,7 +194,13 @@ public class Verify {
 						}
 					}
 					
-					assertEquals(total, soma);
+					assertEquals("O total não é igual à soma", total, soma);
+					
+					if (somaAnterior != 0) {
+						assertNotSame("As somas de números aleatórios estão iguais. Verificar saída", somaAnterior, soma);
+					}
+					
+					somaAnterior = soma;
 				}				
 			}
 		} catch (IOException e) {
