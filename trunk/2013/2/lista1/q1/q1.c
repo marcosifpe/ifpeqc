@@ -25,4 +25,3 @@ int main(void) {
 	fclose(stdout);
 	return 0;
 }
-
