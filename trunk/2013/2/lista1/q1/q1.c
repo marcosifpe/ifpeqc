@@ -6,7 +6,7 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
-
+//comentario
 int main(void) {
 	int n, i = 0, num;
 	double soma_inversos = 0.0;
