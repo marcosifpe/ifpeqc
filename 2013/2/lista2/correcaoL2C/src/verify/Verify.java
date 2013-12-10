@@ -14,8 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Verify {
 	private static int questionNumber = 0;
 	private static final String RESULT_PATTERN = "../q";
@@ -68,47 +71,47 @@ public class Verify {
 	}
 
 	@Test
-	public void testQ1() {
+	public void testQ01() {
 		compare();
 	}
 	
 	@Test
-	public void testQ2() {
+	public void testQ02() {
 		compare();
 	}
 
 	@Test
-	public void testQ3() {
+	public void testQ03() {
 		compare();
 	}
 	
 	@Test
-	public void testQ4() {
+	public void testQ04() {
 		compare();
 	}
 
 	@Test
-	public void testQ5() {
+	public void testQ05() {
 		compare();
 	}
 	
 	@Test
-	public void testQ6() {
+	public void testQ06() {
 		compare();
 	}
 
 	@Test
-	public void testQ7() {
+	public void testQ07() {
 		compare();
 	}
 	
 	@Test
-	public void testQ8() {
+	public void testQ08() {
 		compare();
 	}
 	
 	@Test
-	public void testQ9() {
+	public void testQ09() {
 		compare();
 	}
 	
