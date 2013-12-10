@@ -43,12 +43,12 @@ int main(void) {
 		if (linha == NULL)
 			break;
 
-		invertida = realloc(invertida, sizeof(char) * (strlen(linha) + 1));
+		invertida = realloc(NULL, sizeof(char) * (strlen(linha) + 1));
 		if (invertida == NULL)
 			return EXIT_FAILURE;
 
 		inverte(linha, invertida);
-		printf("%s\n", invertida);
+		fprintf(s, "%s\n", invertida);
 		free(invertida);
 	}
 
