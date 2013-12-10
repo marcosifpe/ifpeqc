@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="q10">
+	<property file="../correcaoL2C/source.properties" />
+	<property name="question.number" value="10"/>
+
+	<target name="clean">
+		<echo message="clean..." />
+		<delete>
+		    <fileset dir="." includes="*.c,s*.txt"/>
+		</delete>
+		<delete dir="Debug" />
+		<echo message="done" />
+	</target>
+	<target name="copy">
+		<echo message="copy..." />
+		<copy file="${source.driver}${source.dir}\q${question.number}\q${question.number}.c" tofile="q${question.number}.c" overwrite="true" failonerror="false"/>
+		<echo message="done" />
+	</target>
+	<target name="all" depends="clean, copy" />
+</project>
