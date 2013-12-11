@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #define T 5
-#define L 25
+#define L 26
 
 struct {
 	char letra;
