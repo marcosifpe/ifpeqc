@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define MAX 35
 #define LIM 100
 #define MED 10
@@ -19,38 +20,40 @@ paciente* criar(paciente * anteriores, int max) {
 	return atuais;
 }
 
-paciente * shellSort(paciente *vet, int size) {
-	paciente * p = criar(NULL, size);
-    int i , j , value;
-    int gap = 1;
+void buble(paciente *vet, int size) {
+	paciente p;
+	int i, j, min;
 
-    while(gap < size) {
-        gap = 3*gap+1;
-    }
+	for (i = 0; i < size; i++) {
+        p.hdl = vet[i].hdl;
+        p.ldl = vet[i].ldl;
+        p.tempo_trat = vet[i].tempo_trat;
+        strcpy(p.nome, vet[i].nome);
+        min = i;
 
-    while ( gap > 1) {
-        gap /= 3;
-        for(i = gap; i < size; i++) {
-            value = vet[i].tempo_trat;
-            j = i - gap;
+		for (j = i + 1; j < size; j++) {
+			if (vet[j].tempo_trat < vet[min].tempo_trat) {
+				min = j;
+			}
+		}
 
-            while (j >= 0 && value < vet[j].tempo_trat) {
-                p[j + gap] = vet[j];
-                j -= gap;
-            }
+		vet[i].hdl = vet[min].hdl;
+		vet[i].ldl = vet[min].ldl;
+		vet[i].tempo_trat = vet[min].tempo_trat;
+		strcpy(vet[i].nome, vet[min].nome);
 
-            p[j + gap] = vet[i];
-        }
-    }
+		vet[min].hdl = p.hdl;
+		vet[min].ldl = p.ldl;
+		vet[min].tempo_trat = p.tempo_trat;
+		strcpy(vet[min].nome, p.nome);
 
-    return p;
+	}
 }
 
 int main(void) {
 	FILE *in = fopen("e10.txt", "r"), *out = fopen("s10.txt", "w");
 	int i, n = 0, max = 4, dif;
 	paciente * pacientes = criar(NULL, max);
-	paciente * ordenados;
 
 	while(!feof(in)) {
 		fscanf(in, "%d %d", &pacientes[n].hdl, &pacientes[n].ldl);
@@ -89,14 +92,13 @@ int main(void) {
 		}
 	}
 
-	ordenados = shellSort(pacientes, n);
+	buble(pacientes, n);
 
 	for (i = 0; i < n; ++i) {
-		fprintf(out, "%s, HDL: %d, LDL: %d, tempo: %d semanas\n", ordenados[i].nome, ordenados[i].hdl, ordenados[i].ldl, ordenados[i].tempo_trat);
+		fprintf(out, "%s, HDL: %d, LDL: %d, tempo: %d semanas\n", pacientes[i].nome, pacientes[i].hdl, pacientes[i].ldl, pacientes[i].tempo_trat);
 	}
 
 	free(pacientes);
-	free(ordenados);
 	fclose(in);
 	fclose(out);
 	return EXIT_SUCCESS;
