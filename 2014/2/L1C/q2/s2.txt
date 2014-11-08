@@ -1,0 +1,4 @@
+99 11
+60 10
+Nao existem impares no intervalo
+5 5
