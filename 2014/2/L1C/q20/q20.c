@@ -33,6 +33,8 @@ int main(void) {
 		scanf("%d %d", &x, &y);
 	}
 
+	fclose(stdin);
+	fclose(stdout);
 	return 0;
 }
 
