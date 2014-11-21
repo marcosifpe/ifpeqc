@@ -25,13 +25,14 @@ int main(void) {
 
 		if (texto[i] == ' ') {
 			palavras += 1;
-			sa += s;
+			if (sa != s)
+				sa = s;
 		}
 	}
 
 	palavras += 1;
 
-	printf("%.1lf%%", 100.0 * s / palavras);
+	printf("%.1lf%%", 100 * ((double) s) / palavras);
 	fclose(stdin);
     fclose(stdout);
     return 0;
