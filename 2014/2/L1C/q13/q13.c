@@ -24,8 +24,8 @@ int main(int argc, char **argv) {
 	freopen("e13.txt", "r", stdin);
 	freopen("s13.txt", "w", stdout);
 	scanf("%d", &n);
-	printf("%.15lf\n", calculaPI(n));
-	printf("%.15lf\n", (M_PI - calculaPI(n)) / M_PI);
+	printf("PI: %.15lf\n", calculaPI(n));
+	printf("Erro: %.15lf\n", (M_PI - calculaPI(n)) / M_PI);
 	return EXIT_SUCCESS;
 }
 
