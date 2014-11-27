@@ -2,3 +2,4 @@
 60 10
 Nao existem impares no intervalo
 5 5
+3125 125
