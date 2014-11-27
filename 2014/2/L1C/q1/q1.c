@@ -18,7 +18,7 @@ int main(void) {
 		scanf("%lf %lf %lf", &x, &y, &z);
 		x *= z;
 		y *= z;
-		printf("%.2lf %.2lf\n", x, y);
+		printf("R$%.2lf R$%.2lf\n", x, y); //Simbolo do real
 		printf("%.2lf%%\n", x > y ? 100* (1.0 - y / x) : 100* (1.0 - x / y));
 	}
 
