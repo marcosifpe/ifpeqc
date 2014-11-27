@@ -19,9 +19,9 @@ int main() {
 		scanf("%s", sub_str);
 		scanf("%s", str);
 		if (strstr(str, sub_str) != NULL)
-			printf("%s eh subsstring de %s\n", sub_str, str);
+			printf("%s eh substring de %s\n", sub_str, str);
 		else
-			printf("%s nao eh subsstring de %s\n", sub_str, str);
+			printf("%s nao eh substring de %s\n", sub_str, str);
 	}
 
 	fclose(stdin);
