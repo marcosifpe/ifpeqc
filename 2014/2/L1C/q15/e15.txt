@@ -1,7 +1,8 @@
-6
+7
 5 Neymar
 7 Ibrahimovic
 6 Cristiano Ronaldo 
 11 Caca Rato
 9 Lionel Messi
 7 Bastian Schweinsteiger
+11 Garrinha
