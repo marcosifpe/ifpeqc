@@ -48,24 +48,28 @@ double tangente(double x, int precisao) {
 int main(void) {
         double angulo;
         int precisao;
-        freopen("e26.txt", "r", stdin);
-        freopen("s26.txt", "w", stdout);
+      freopen("e26.txt", "r", stdin);
+      freopen("s26.txt", "w", stdout);
 
         scanf("%lf %d", &angulo, &precisao);
 
         while (angulo >= 0.0) {
                 printf("sen(%.2lf): %.4lf, ", angulo, seno(angulo, precisao));
-                printf("cos(%.2lf): %.4lf, ", angulo, cosseno(angulo, precisao));
 
                 if (angulo != 90.0 && angulo != 270.0) {
+                        printf("cos(%.2lf): %.4lf, ", angulo, cosseno(angulo, precisao));
                         printf("tan(%.2lf): %.4lf", angulo, tangente(angulo, precisao));
                 }
+               else {
+                        printf("cos(%.2lf): %.4lf ", angulo, cosseno(angulo, precisao));
+                }
+
 
                 printf("\n");
                 scanf("%lf %d", &angulo, &precisao);
         }
 
-        fclose(stdin);
+       fclose(stdin);
         fclose(stdout);
         return 0;
 }
