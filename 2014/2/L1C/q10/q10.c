@@ -30,7 +30,7 @@ int main(void) {
 	freopen("s10.txt", "w", stdout);
 	scanf("%d %d", &a, &b);
 
-	while (a && b) {
+	while (a || b) {
 		printf("%d\n", exponenciacao(a, b));
 		scanf("%d %d", &a, &b);
 	}
