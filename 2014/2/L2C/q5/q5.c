@@ -50,12 +50,11 @@ int somaDiagonalSecundaria(int m[N][N]) {
 }
 
 int main(void) {
-	int i, j, k, m[N][N], s;
+	int i, j, m[N][N], s;
 	char qm;
 	freopen("e5.txt", "r", stdin);
 	freopen("s5.txt", "w", stdout);
 
-	scanf("%d", &k);
 	do {
 		qm = 'S';
 		lerMatriz(m);
@@ -80,7 +79,7 @@ int main(void) {
 		}
 
 		printf("%c ", qm);
-	} while (--k);
+	} while (getc(stdin) != EOF);
 
 	fclose(stdin);
 	fclose(stdout);
