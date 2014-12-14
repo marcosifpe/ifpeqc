@@ -1,0 +1,7 @@
+Maria Severina Antunes, HDL: 230, LDL: 17, tempo: 0 semanas
+Daniela Gomes, HDL: 122, LDL: 100, tempo: 1 semanas
+Joao da Silva, HDL: 100, LDL: 50, tempo: 5 semanas
+Luis Inacio Lula da Silva, HDL: 279, LDL: 96, tempo: 6 semanas
+Jose Maria Gomes, HDL: 123, LDL: 95, tempo: 11 semanas
+Marcelina Neves, HDL: 128, LDL: 95, tempo: 27 semanas
+Dionisio Bonaparte, HDL: 100, LDL: 100, tempo: 39 semanas
