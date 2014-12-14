@@ -1,6 +1,6 @@
 #include <stdbool.h>
 #include <stdio.h>
-#define T 10
+#include <stdlib.h>
 
 bool primo(int n) {
 	int i;
@@ -49,27 +49,47 @@ void shellSort(int vet[], int size) {
 	}
 }
 
+int * criarVetor(int * p, int elementos) {
+	p = (int *) realloc(p, elementos * sizeof(int));
+
+	if (p == NULL) //aborta execução caso não haja memória disponível
+		exit(EXIT_FAILURE);
+
+	return p;
+}
+
 int main(void) {
-	int a, b, v[T], i;
+	int a, b, i, max = 5, tam = 0;
+	int * v;
+	FILE * in, *out;
 
-	freopen("e1.txt", "r", stdin);
-	freopen("s1.txt", "w", stdout);
+	v = criarVetor(NULL, max);
 
-	for (i = 0; i < T; i++) {
-		scanf("%i %i", &a, &b);
+	in = fopen("e1.txt", "r");
+	out = fopen("s1.txt", "w");
+
+	for (i = 0; !feof(in); i++) {
+		if (i == max) {
+			max *= 2;
+			v = criarVetor(v, max);
+		}
+
+		fscanf(in, "%i %i", &a, &b);
 		v[i] = somaPrimos(a, b);
+		tam += 1;
 	}
 
-	shellSort(v, T);
+	shellSort(v, tam);
 
-	for (i = 0; i < T; i++) {
-		printf("%i", v[i]);
-		if (i != T - 1)
-			printf(", ");
+	for (i = 0; i < tam; i++) {
+		fprintf(out, "%i", v[i]);
+		if (i != tam - 1)
+			fprintf(out, ", ");
 	}
-	printf("\n");
 
-	fclose(stdin);
-	fclose(stdout);
+	fprintf(out, "\n");
+
+	fclose(in);
+	fclose(out);
 	return 0;
 }
