@@ -4,19 +4,24 @@
 
 int main(void) {
 	FILE * in = fopen("e4.txt", "r"), *out = fopen("s4.txt", "w");
-	int i, j, mapas, matriz[T][T], costa;
+	int i, j, matriz[T][T], costa;
+	int sair = 0;
 
 	if (in == NULL || out == NULL)
 		exit(EXIT_FAILURE);
 
-	fscanf(in, "%d", &mapas);
-
-	while (mapas--) {
+	while (1) {
 		for (i = 0; i < T; ++i) {
 			for (j = 0; j < T; ++j) {
-				fscanf(in, "%d", &matriz[i][j]);
+				if (fscanf(in, "%d", &matriz[i][j]) == EOF) {
+					sair = 1;
+					break;
+				}
 			}
 		}
+
+		if (sair)
+			break;
 
 		for (costa = 0, i = 0; i < T; ++i) {
 			for (j = 0; j < T; ++j) {
